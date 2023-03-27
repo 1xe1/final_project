@@ -1,6 +1,6 @@
 const user = localStorage.getItem("USER_DATA");
 if (!user) {
-  window.location.href = "signin.html";
+  window.location.href = "index.html";
 } else {
   const { name, email } = JSON.parse(user);
   // const { email } = JSON.parse(user);
@@ -9,12 +9,12 @@ if (!user) {
   // h3.innerHTML = `Welcome<br>${email}`;
 }
 
-// const signOut = document.querySelector("#sign-out");
+const signOut = document.querySelector("#sign-out");
 
-// signOut.addEventListener("click", () => {
-//   clearLocalStorage();
-  // window.location.href = "index.html";
-// });
+signOut.addEventListener("click", () => {
+  clearLocalStorage();
+  window.location.href = "index.html";
+});
 
 const clearLocalStorage = () => {
   localStorage.removeItem("AUTH_TOKEN");
